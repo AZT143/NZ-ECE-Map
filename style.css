@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+#search-container {
+    position: absolute;
+    top: 10px;
+    left: 50px; /* Adjust as needed to avoid overlap with other elements */
+    z-index: 1000;
+    background: rgba(50, 50, 70, 0.7); /* Semi-transparent grey with blue tint */
+    padding: 10px;
+    border-radius: 5px;
+    color: #ddd; /* Light text for contrast */
+}
+
+#search-input {
+    width: 200px;
+    padding: 5px;
+    background: rgba(70, 70, 90, 0.8); /* Slightly lighter for input field */
+    color: #fff; /* White text */
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+#search-results {
+    position: absolute;
+    top: 40px; /* Adjust based on search bar height */
+    left: 0;
+    width: 100%; /* Match search bar width */
+    max-height: 200px; /* Limit height, enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background: rgba(50, 50, 70, 0.9); /* Semi-transparent background */
+    color: #ddd; /* Text color */
+    z-index: 1000; /* Above map elements */
+    display: none; /* Hidden by default */
+}
+
+#search-results.visible {
+    display: block; /* Show when there are results */
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: rgba(50, 50, 70, 0.9); /* Same as search bar */
+    color: #ddd; /* Light grey text */
+    border-radius: 5px;
+}
+
+.leaflet-popup-content {
+    margin: 10px;
+}
+
+.leaflet-popup-close-button {
+    color: #ddd; /* Match text color */
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+    background-color: #333; /* Dark grey */
+    color: #ddd; /* Light grey text for contrast */
+    border: 1px solid #555; /* Slightly lighter border */
+}
+
+.leaflet-control-zoom-in:hover, .leaflet-control-zoom-out:hover {
+    background-color: #444; /* Slightly lighter grey on hover */
+}
+
+.search-result-item {
+    padding: 5px;
+    cursor: pointer; /* Changes cursor to pointer */
+    background-color: rgba(70, 70, 90, 0.8); /* Default background */
+    color: #ddd;
+}
+
+.search-result-item:hover {
+    background-color: rgba(90, 90, 110, 0.9); /* Lighter background on hover */
+}
